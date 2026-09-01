@@ -7,7 +7,7 @@ user_bp = Blueprint("user_bp",__name__,url_prefix="/user")
 app = Flask(__name__)
 
 
-@app.route("/test")
+@user_bp.route("/test")
 def handle_test():
     return "HELLO FROM BLUEPRINT"
 
