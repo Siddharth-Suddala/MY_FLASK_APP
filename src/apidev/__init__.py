@@ -120,11 +120,15 @@
 
 from flask import Flask
 
+from user_bp import user_bp
+
 app = Flask(__name__)
 
-@app.route("/")
+app.register_blueprint(user_bp)
+
+@app.route("/test")
 def handle_home():
-    return "HELLO from init!"
+    return "HELLO from Test!"
 
 if __name__ == "__main__":
     app.run(debug=True)
