@@ -120,7 +120,7 @@
 
 from flask import Flask
 
-from user_bp import user_bp
+from .user_bp import user_bp
 
 app = Flask(__name__)
 
